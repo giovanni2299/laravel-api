@@ -11,7 +11,7 @@ class ProjectController extends Controller
     //
     public function index(){
 
-        $projects = Project::all();
+        $projects = Project::with('technolgies','type');
         // $results = Project::all();
 
         return response()->json([
